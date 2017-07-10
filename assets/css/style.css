@@ -1,0 +1,98 @@
+#text {
+	color: black;
+}
+
+.req {
+	color: red;
+}
+
+.colon {
+	color: white;
+}
+
+.button {
+	color: blue;
+	display: inline-block;
+	position: relative;
+	padding: 3px 6px;
+}
+
+.button__badge {
+	background-color: #fa3e3e;
+	border-radius: 2px;
+	color: white;
+	padding: 1px 3px;
+	font-size: 10px;
+	position: absolute;
+	top: -3;
+	right: 2;
+}
+
+.empty-text-log {
+	color: red;
+	text-align: center;
+	position: relative;
+}
+
+.profile {
+	color: lightcoral;
+	padding-left: 130px;
+	font-size: 20px;
+	font-weight: bold;
+}
+.requestMsg-text-log {
+	color: green;
+	text-align: center;
+	position: relative;
+}
+
+.requestCancelMsg-text-log {
+	color: red;
+	text-align: center;
+	position: relative;
+}
+
+.test {
+	width: 210px;
+	margin-top: 10px;
+	overflow: auto;
+}
+
+#test1 {
+	width: 210px;
+	margin-top: 32px;
+	overflow: auto;
+}
+
+.testd {
+	width: 210px;
+	margin-top: 32px;
+	overflow: auto;
+}
+
+.container-1 .icon {
+	position: absolute;
+	/* z-index: 1; */
+	color: #4f5b66;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.container-1 input#search {
+	width: 210px;
+	height: 30px;
+	background: wheat;
+	border: none;
+	font-size: 10pt;
+	float: left;
+	color: #63717f;
+	padding-left: 45px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	overflow: auto;
+}
+
+/* #test1 {
+	width: 250px;
+} */

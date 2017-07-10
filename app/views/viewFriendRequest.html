@@ -1,0 +1,38 @@
+
+<div class="container-fluid">
+	<div ng-if="infoMessage" style="color: red">None of them send a
+		Friend Request to you.</div>
+	<div class="row">
+		<div class="col-md-10">
+
+			<div class="portlet-title">
+				<div class="page-header">
+					<h3 id="text">Friend Requests</h3>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<form name="freqForm" novalidate>
+
+					<div class="form-group col-lg-12" ng-repeat="user in userList">
+						<div class="col-lg-6">
+							<b style="color: green; font-size: 20px;">{{user.name}} </b><b>Sent
+								a Friend Request To You.You want to Confirm/Reject?</b>
+						</div>
+						<div class="col-lg-6">
+							<span class="col-lg-3">
+								<button type="submit" class="btn btn-success"
+									ng-click="accept(user)">Confirm</button>
+							</span> <span class="col-lg-3">
+								<button type="submit" class="btn btn-warning"
+									ng-click="reject(user)">Reject</button>
+							</span>
+
+						</div>
+
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

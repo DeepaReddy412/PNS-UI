@@ -1,0 +1,92 @@
+<div class="container-fluid">
+	<div class="empty-text-log" ng-if="infoMessage">No Users Found to
+		send Friend Request</div>
+	<div class="requestMsg-text-log" ng-if="requestMsg">{{
+		friendRequestMsg }}</div>
+	<div class="requestCancelMsg-text-log" ng-if="requestCancelMsg">{{
+		friendRequestCancelMsg }}</div>
+	<div class="row">
+		<div class="portlet-title">
+			<div class="page-header">
+				<h3 id="text">Dashboard</h3>
+			</div>
+		</div>
+
+		<div class="portlet-body">
+
+			<div class="form-group col-lg-7" ng-if="showUserProfileInfo">
+				<div class="profile">Profile</div>
+				<table width="100%" class="table table-hover" id="tblMain" style="margin-top:50px;">
+					<thead>
+
+						<tr>
+							<th>
+								<div class="col-sm-12">
+									<div class="col-sm-4">
+										<span> <img alt="image" class="img-circle"
+											src="theme/img/profile_small.jpg" />
+									</div>
+									<div class="col-sm-8">
+										<button type="submit" class="btn btn-primary"
+											ng-show="showAddButton"
+											ng-click="sendRequest(userInfo.email)">{{button}}</button>
+
+										<button type="submit" class="btn btn-primary"
+											ng-show="showCancelButton"
+											ng-click="cancelRequest(userInfo.email)">{{cancelButton}}
+										</button>
+
+										<button type="submit" class="btn btn-primary"
+											ng-click="respondtoreq(userInfo)" ng-show="showRespondButton">{{respondButton}}</button>
+
+										<button type="submit" class="btn btn-primary"
+											ng-click="block(userInfo)" ng-show="showBlockButton">Block</button>
+
+										<button type="submit" class="btn btn-primary"
+											ng-show="showUnBlockButton" ng-click="unblock(userInfo)">UnBlock</button>
+									</div>
+								</div>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<div class="col-sm-12">
+									<div class="col-sm-4">
+										<label>Name :</label>
+									</div>
+									<div class="col-sm-8">{{userInfo.name}}</div>
+
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td><div class="col-sm-12">
+									<div class="col-sm-4">
+										<label>Email :</label>
+									</div>
+									<div class="col-sm-8">{{userInfo.email}}</div>
+
+								</div></td>
+						</tr>
+
+						<tr>
+							<td><div class="col-sm-12">
+									<div class="col-sm-4">
+										<label>Phone :</label>
+									</div>
+									<div class="col-sm-8">{{userInfo.mobileNo}}</div>
+
+								</div></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+

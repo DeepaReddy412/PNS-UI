@@ -1,0 +1,70 @@
+<style>
+.active {
+	color: blue;
+}
+
+.inactive {
+	color: black;
+}
+</style>
+<nav class="navbar navbar-static-top" role="navigation"
+	style="margin-bottom: 0" ng-controller="CommonLayoutController">
+	<div class="navbar-header">
+		<span minimaliza-sidebar></span>
+		<div class="col-lg-8" ng-if="showSearch">
+			<form name="searchForm" novalidate>
+				<div class="dropdown">
+					<div class="box">
+						<div class="container-1" style="margin-top: 15px;">
+							<span class="icon"><i class="fa fa-search"></i></span> <input
+								type="search" id="search" placeholder="Search Friends..."
+								ng-model="searchFilter" class="dropdown-toggle"
+								value="{{searchFilter}}" data-toggle="dropdown" />
+							<ul class="dropdown-menu" role="menu" id="test1"
+								ng-model="searchFilter" aria-labelledby="individualDrop"
+								ng-if="searchFilter">
+
+								<li role="presentation"
+									ng-repeat="email in emails | filter: searchFilter"
+									ng-model="email"><a role="menuitem"
+									ng-click="selectEntity(email)">{{email}}</a></li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<ul class="nav navbar-top-links navbar-right">
+
+		<li><a id="fid" href="" ng-click="friend()"
+			ng-if="showFriendsIcon" title="friends"> <i class="fa fa-users"
+				style="font-size: 1.5em; color: darkcyan"></i></span>
+		</a></li>
+		<div class="button">
+			<a href="" ng-click="frequest()" ng-if="showLogout"><i
+				class="fa fa-bell" title="Friend Requests" style="font-size: 1.3em;"></i>
+				<span ng-if="notifications" class="button__badge">{{notifications}}</span></a>
+		</div>
+
+		<li uib-dropdown ng-if="loggedInUser!=null"><a href
+			uib-dropdown-toggle> <i class="fa fa-user"
+				style="font-size: 1.3em; color: maroon"></i> <b
+				style="color: green; font-size: 15px;">{{loggeduser}}</b> <span
+				class="caret" style="color: green;"></span></a>
+			<ul role="menu" uib-dropdown-menu>
+				<li><a href="" ng-click="profile()"><span
+						style="float: left">Profile</span><span style="float: right"><i
+							class="fa fa-user" title="Update Profile"></i></span></a></li>
+				<li><a href="" ng-click="logout()" ng-if="showLogout"><span
+						style="float: left">Logout</span> <span
+						class="glyphicon glyphicon-log-in" style="float: right"></span> </a></li>
+			</ul></li>
+
+
+	</ul>
+</nav>
+

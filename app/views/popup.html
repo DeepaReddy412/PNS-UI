@@ -1,0 +1,30 @@
+<div ng-if="showBlockTemplate">
+	<div class="modal-header">
+		<h3 class="modal-title">Block Friend</h3>
+	</div>
+	<div class="modal-body">
+		<p>
+			Are you sure to block <b>{{item}}</b>?
+		</p>
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-primary" type="button" ng-click="ok()">Block</button>
+		<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+	</div>
+</div>
+<div ng-if="showRespondTemplate">
+	<div class="modal-header">
+		<h3 class="modal-title">Respond to Friend Request</h3>
+	</div>
+	<div class="modal-body">
+		<p>
+			Are you sure to accept <b>{{item}}'s</b> friend request?
+		</p>
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-primary" type="button" ng-click="accept()">Accept</button>
+		<button class="btn btn-warning" type="button" ng-click="reject()">Cancel</button>
+	</div>
+</div>
+<!--   </div>
+</div> -->

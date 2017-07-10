@@ -1,0 +1,93 @@
+<html ng-app="routerApp">
+
+<head>
+<script src="assets/JS/angular.js" type="text/javascript"></script>
+<script src="assets/JS/dirPagination.js" type="text/javascript"></script>
+<script src="assets/JS/angular-ui-router.min.js" type="text/javascript"></script>
+<script src="assets/JS/ui-bootstrap-tpls-2.5.0.min.js"
+	type="text/javascript"></script>
+<script src="assets/js/chat.js" type="text/javascript"></script>
+<!-- Include Bootstrap CSS CDN link for popup-->
+<link
+	href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"
+	rel="stylesheet">
+<script
+	src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore-min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" />
+
+<!--css -->
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/chat.css">
+<link rel="img" href="assets/images/chat-icon.jpg">
+
+<!--Controllers -->
+<script src="app/scripts/app.js" type="text/javascript"></script>
+<script src="app/scripts/login_controller.js" type="text/javascript"></script>
+<script src="app/scripts/reg_controller.js" type="text/javascript"></script>
+<script src="app/scripts/dashboard_controller.js" type="text/javascript"></script>
+<script src="app/scripts/forgot_password_controller.js"
+	type="text/javascript"></script>
+<script src="app/scripts/chat_controller.js" type="text/javascript"></script>
+<script src="app/scripts/friend_request_controller.js"
+	type="text/javascript"></script>
+<script src="app/scripts/common_layout_controller.js"
+	type="text/javascript"></script>
+<script src="app/scripts/profile_controller.js"
+	type="text/javascript"></script>
+
+
+<script src="app/scripts/friend_controller.js" type="text/javascript"></script>
+<script src="app/scripts/popup_controller.js" type="text/javascript"></script>
+<!--theme -->
+
+<script src="theme/js/datatables.min.js"></script>
+<script src="theme/js/inspinia.js"></script>
+<script src="theme/js/jquery.metisMenu.js"></script>
+<script src="theme/js/jquery.slimscroll.min.js"></script>
+<link href="theme/css/datatables.min.css" rel="stylesheet">
+<link href="theme/css/animate.css" rel="stylesheet">
+<link href="theme/css/style.css" rel="stylesheet">
+<title>Personal Network System</title>
+</head>
+
+<style>
+.navbar {
+	border-radius: 0;
+}
+</style>
+<body>
+	<div ng-include="'layout/navbar_layout.html'"></div>
+	<div id="wrapper">
+		<div id="page-wrapper" class="gray-bg">
+			<div class="row border-bottom">
+				<div ng-include="'layout/header_layout.html'"></div>
+			</div>
+			<div ui-view></div>
+			<div ng-include="'layout/footer.html'"></div>
+		</div>
+	</div>
+</body>
+<!-- <body>
+	<nav class="navbar navbar-inverse" role="navigation">
+		<div class="navbar-header">
+			
+			<div ng-include="'layout/header_layout.html'"></div>
+
+		</div>
+	</nav>
+	<div class="container">
+
+		<div ui-view></div>
+	</div>
+</body> -->
+
+</html>

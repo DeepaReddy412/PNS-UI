@@ -1,0 +1,101 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4">
+			<div ng-if="errorMessage" style="color: red">{{ errorMessage }}</div>
+			<div ng-if="successMessage" style="color: green">{{
+				successMessage }}</div>
+
+			<div class="portlet-title">
+				<div class="page-header">
+					<!-- <h3 id="text">Login</h3> -->
+					<h3>Login</h3>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<form name="loginForm" novalidate>
+					<!-- 	<div class="form-group">
+						<label for="userName" id="text">EmailId</label> <span class="req">*</span>:<input
+							type="email" class="form-control" name="emailId"
+							placeholder="Enter emailId" ng-model="loginUser.userName"
+							autofocus="autofocus" id="emailId" value="" ng-required="true"
+							ng-pattern="/^[a-z0-9A-Z]+[a-zA-Z0-9._]*@[a-zA-Z]+(\.[a-zA-Z]+)*(\.[a-zA-Z]{2,5})$/" />
+							<span style="color: red"
+							ng-show="submitted && loginForm.emailId.$error.required">
+							Requires a valid email123</span> <span style="color: red"
+							ng-show="submitted && loginForm.emailId.$error.pattern">
+							Requires a valid email3213</span>
+						<div style="color: red" ng-messages="loginForm.emailId.$error "
+							ng-show="loginForm.emailId.$touched && !loginForm.emailId.$focused">
+							<span ng-message="required">Requires a valid email</span>
+
+						</div>
+					</div> -->
+					<div class="form-group"
+						ng-class="{'has-error': loginForm.email.$invalid && loginForm.email.$dirty, 'has-success': loginForm.email.$valid }">
+						<input type="email" class="form-control" placeholder="Enter email"
+							ng-pattern="/^[a-z0-9A-Z]+[a-zA-Z0-9._]*@[a-zA-Z]+(\.[a-zA-Z]+)*(\.[a-zA-Z]{2,5})$/"
+							name="email" ng-model="loginUser.userName" required />
+						<p class="help-block" style="color: red"
+							ng-if="loginForm.email.$invalid && loginForm.email.$dirty">Please
+							Enter a valid email address</p>
+					</div>
+					<div class="form-group"
+						ng-class="{'has-error': loginForm.password.$invalid && loginForm.password.$dirty, 'has-success': loginForm.password.$valid}">
+						<input type="password" class="form-control"
+							placeholder="Enter password" name="password"
+							ng-model="loginUser.password" ng-minLength="8" required />
+						<p class="help-block" style="color: red"
+							ng-if="loginForm.password.$invalid && loginForm.password.$dirty">Please
+							Enter at least 8 characters</p>
+					</div>
+
+					<!-- 	<div class="form-group">
+						<label for="password" id="text">Password</label> <span class="req">*</span>:<input
+							type="password" class="form-control" name="password"
+							ng-model="loginUser.password" placeholder="Enter Password"
+							id="password" ng-required="true" value="" /> <span
+							ng-show="submitted && loginForm.password.$error.required"></span>
+						<span style="color: red"
+							ng-show="submitted && loginForm.password.$error.required">
+							Requires a valid password</span>
+						<div style="color: red" ng-messages=" loginForm.password.$error "
+							ng-show="loginForm.password.$touched && !loginForm.password.$focused">
+							<span ng-message="required">Requires a valid password</span>
+						</div>
+					</div> -->
+
+					<div class="form-group">
+						<a ui-sref="login" ng-disabled="loginForm.$invalid"
+							class="btn btn-success" style="margin-left: 140px;"
+							ng-click="login(loginUser)">Login</a>
+					</div>
+					<!-- <div class="form-group">
+						<a ui-sref="forgotPassword"
+							style="margin-left: 115px; color: white;"><b>Forgot
+								Password?</b></a>
+					</div>
+ -->
+					<div class="form-group">
+						<a ui-sref="forgotPassword" style="margin-left: 115px;"><b>Forgot
+								Password?</b></a>
+					</div>
+					<div class="form-group">
+						<p style="margin-left: 80px;">
+							Don't have an account? <a ui-sref="reg"><b>Sign up</b></a>
+
+						</p>
+					</div>
+					<!-- <div class="form-group">
+						<p style="margin-left: 80px;" id="text">
+							Don't have an account? <a ui-sref="reg"><b id="text">Sign
+									up</b></a>
+
+						</p>
+					</div> -->
+				</form>
+
+
+			</div>
+		</div>
+	</div>
+</div>
